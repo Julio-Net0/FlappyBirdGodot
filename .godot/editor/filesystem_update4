@@ -1,0 +1,7 @@
+res://default_env.tres
+res://Cenas/Cena.tscn
+res://Cenas/jogador.tscn
+res://Cenas/jogador.gd
+res://Cenas/cena.gd
+res://Cenas/chao.tscn
+res://Cenas/chao.gd

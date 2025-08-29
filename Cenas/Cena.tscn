@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://dq5sdfvmahd4o"]
+
+[ext_resource type="Texture2D" uid="uid://dfo65usqpava8" path="res://Imagens/bg.png" id="1"]
+[ext_resource type="Script" uid="uid://0082p08uy1yi" path="res://Cenas/cena.gd" id="1_gib1q"]
+[ext_resource type="PackedScene" uid="uid://cx5p0wy88o030" path="res://Cenas/jogador.tscn" id="3_3lyk0"]
+[ext_resource type="PackedScene" uid="uid://c8rm8k67jv7r4" path="res://Cenas/chao.tscn" id="4_ry352"]
+
+[node name="Principal" type="Node2D"]
+script = ExtResource("1_gib1q")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(-4.44293, -3.77548)
+scale = Vector2(1.00463, 1)
+texture = ExtResource("1")
+offset = Vector2(432, 220)
+
+[node name="Jogador" parent="." instance=ExtResource("3_3lyk0")]
+
+[node name="Chao" parent="." instance=ExtResource("4_ry352")]
+position = Vector2(860, 676)
