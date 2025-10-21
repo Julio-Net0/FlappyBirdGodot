@@ -1,5 +1,7 @@
 extends Node2D
 
+@export var pipe_scene : PackedScene
+
 var game_running : bool
 var game_over : bool
 var scroll
@@ -13,6 +15,7 @@ const PIPE_RANGE : int = 200
 
 func _ready():
 	new_game()
+	ground_height = $Chao.get_node("Sprite2D").texture.get_height()
 	screen_size = get_window().size
 	
 func new_game():
@@ -20,6 +23,7 @@ func new_game():
 	game_over = false
 	score = 0
 	scroll = 0
+	pipes.clear()
 	$Jogador.reset()
 	
 func _input(event):
@@ -36,6 +40,7 @@ func start_game():
 	game_running = true
 	$Jogador.flying = true
 	$Jogador.flap()
+	$Timer.start()
 		
 func _process(delta: float) -> void:
 	if game_running:
@@ -45,3 +50,20 @@ func _process(delta: float) -> void:
 		
 		if -scroll >= screen_size.x:
 			scroll = 0
+			
+		for pipe in pipes:
+			pipe.position.x -= SCROLL_SPEED
+			
+func _on_timer_timeout() -> void:
+	generate_pipes()
+	
+func generate_pipes():
+	var pipe = pipe_scene.instantiate()
+	pipe.position.x = screen_size.x + PIPE_DELAY
+	pipe.position.y = (screen_size.y - ground_height) / 2 + randi_range(-PIPE_RANGE, PIPE_RANGE)
+	pipe.hit.connect(bird_hit)
+	add_child(pipe)
+	pipes.append(pipe)
+
+func bird_hit():
+	pass

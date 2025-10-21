@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://dprh6nkm788hq"]
+
+[ext_resource type="Texture2D" uid="uid://j5f83dua5hqm" path="res://Imagens/pipe.png" id="1_6gi6n"]
+[ext_resource type="Script" uid="uid://b1gf8qwrc8kqt" path="res://Cenas/cano.gd" id="1_8tsby"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6gi6n"]
+size = Vector2(78, 558)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8tsby"]
+size = Vector2(78, 560)
+
+[node name="Cano" type="Area2D"]
+script = ExtResource("1_8tsby")
+
+[node name="Cima" type="Sprite2D" parent="."]
+position = Vector2(0, -360)
+texture = ExtResource("1_6gi6n")
+flip_v = true
+
+[node name="Baixo" type="Sprite2D" parent="."]
+position = Vector2(0, 360)
+texture = ExtResource("1_6gi6n")
+
+[node name="CollisionCima" type="CollisionShape2D" parent="."]
+position = Vector2(0, -359)
+shape = SubResource("RectangleShape2D_6gi6n")
+
+[node name="CollisionBaixo" type="CollisionShape2D" parent="."]
+position = Vector2(1, 360)
+shape = SubResource("RectangleShape2D_8tsby")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
