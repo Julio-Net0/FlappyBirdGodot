@@ -35,7 +35,8 @@ func _input(event):
 				else:
 					if $Jogador.flying:
 						$Jogador.flap()
-						
+						check_top()
+
 func start_game():
 	game_running = true
 	$Jogador.flying = true
@@ -65,5 +66,21 @@ func generate_pipes():
 	add_child(pipe)
 	pipes.append(pipe)
 
+func check_top():
+	if $Jogador.position.y < 0:
+		$Jogador.falling = true
+		stop_game()
+
+func stop_game():
+	$Timer.stop()
+	$Jogador.flying = false
+	game_running = false
+	game_over = true
+
 func bird_hit():
-	pass
+	$Jogador.falling = true
+	stop_game()
+
+func _on_chao_hit() -> void:
+	$Jogador.falling = false
+	stop_game()

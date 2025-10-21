@@ -1,2 +1,4 @@
 res://default_env.tres
 res://Cenas/Cena.tscn
+res://Cenas/cena.gd
+res://Cenas/cano.gd

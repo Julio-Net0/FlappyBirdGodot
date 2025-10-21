@@ -1,12 +1,12 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1761015556
-default_env.tres::Environment::3942777615187274639::1761015474::0::1::::<><><>0<>0<><>::
+::res://::1761045107
+default_env.tres::Environment::3942777615187274639::1761016136::0::1::::<><><>0<>0<><>::
 icon.png::CompressedTexture2D::3057330021064387727::1760994516::1760994516::1::::<><><>0<>0<>175956261c3f2c401062ca781c7a8ba7<>res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex::
-::res://Cenas/::1761015474
+::res://Cenas/::1761016136
 cano.gd::GDScript::4224080276104679075::1761004844::0::1::::<>Area2D<><>0<>0<><>::
 cano.tscn::PackedScene::8247670204870141450::1761005358::0::1::::<><><>0<>0<><>::uid://j5f83dua5hqm::::res://Imagens/pipe.png<>uid://b1gf8qwrc8kqt::::res://Cenas/cano.gd
 cena.gd::GDScript::1808383239996461952::1761014931::0::1::::<>Node2D<><>0<>0<><>::
-Cena.tscn::PackedScene::8345313440764273772::1761015474::0::1::::<><><>0<>0<><>::uid://dfo65usqpava8::::res://Imagens/bg.png<>uid://0082p08uy1yi::::res://Cenas/cena.gd<>uid://dprh6nkm788hq::::res://Cenas/cano.tscn<>uid://cx5p0wy88o030::::res://Cenas/jogador.tscn<>uid://c8rm8k67jv7r4::::res://Cenas/chao.tscn
+Cena.tscn::PackedScene::8345313440764273772::1761016136::0::1::::<><><>0<>0<><>::uid://dfo65usqpava8::::res://Imagens/bg.png<>uid://0082p08uy1yi::::res://Cenas/cena.gd<>uid://dprh6nkm788hq::::res://Cenas/cano.tscn<>uid://cx5p0wy88o030::::res://Cenas/jogador.tscn<>uid://c8rm8k67jv7r4::::res://Cenas/chao.tscn
 chao.gd::GDScript::6844549280974782431::1760994516::0::1::::<>Area2D<><>0<>0<><>::
 chao.tscn::PackedScene::7124955738961608023::1760994516::0::1::::<><><>0<>0<><>::uid://ecks5ky8el5r::::res://Imagens/ground.png<>uid://c4rsyyarhyg1d::::res://Cenas/chao.gd
 jogador.gd::GDScript::253944108719337547::1760994516::0::1::::<>CharacterBody2D<><>0<>0<><>::

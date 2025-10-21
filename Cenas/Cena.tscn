@@ -26,4 +26,5 @@ position = Vector2(860, 676)
 [node name="Timer" type="Timer" parent="."]
 wait_time = 1.5
 
+[connection signal="hit" from="Chao" to="." method="_on_chao_hit"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
